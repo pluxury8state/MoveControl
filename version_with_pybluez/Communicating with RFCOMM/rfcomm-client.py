@@ -1,4 +1,4 @@
-from pybluez import bluetooth
+from version_with_pybluez.pybluez import bluetooth
 
 # RFCOMM BluetoothSocket, используемый для установления исходящего соединения,
 # подключается к своей цели с помощью метода подключения,

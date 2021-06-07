@@ -1,4 +1,4 @@
-from pybluez import bluetooth
+from version_with_pybluez.pybluez import bluetooth
 
 # this code shows how to establish a connection using an RFCOMM socket, transfer some data, and disconnect.
 

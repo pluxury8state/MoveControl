@@ -1,4 +1,4 @@
-from pybluez import bluetooth
+from version_with_pybluez.pybluez import bluetooth
 
 """
     This Python code looks for a nearby device with the user-friendly name ``My Phone".
