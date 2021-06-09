@@ -16,7 +16,6 @@ def create_server():
     """
 
 
-
 if __name__ == '__main__':
 
     interface = 'DESKTOP-9Q0LR86'
