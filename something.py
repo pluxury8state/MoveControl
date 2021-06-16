@@ -18,15 +18,17 @@ def create_server():
 
 if __name__ == '__main__':
 
-    interface = 'DESKTOP-9Q0LR86'
+    interface = 'DESKTOP-9Q0LR86'  # вот тут нужно вписвть значение, которое говорит ifconfig
 
     scaner = rssi.RSSI_Scan(interface)  # наш сервер, относительно которого будем определять уровень сигнала на других машинах
-    localizer = rssi.RSSI_Localizer('DESKTOP-PAP03NC')
+    localizer = rssi.RSSI_Localizer(interface)
     InfoList = scaner.getAPinfo()
     d = defaultdict(list)
-    distance_list = [{item.get['ssid'].append(localizer.getDistanceFromAP(item))}  for i in range(50) for item in InfoList]
+    for i in range(50):
+        for item in InfoList:
+            d.get(item.get('ssid')).append(localizer.getDistanceFromAP(item))
 
-
+    print(d)
 
 
 
